@@ -168,7 +168,6 @@
     <Content Include="Sample_With_Font.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="add_font.bat" />
     <Content Include="arial.ttf" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">

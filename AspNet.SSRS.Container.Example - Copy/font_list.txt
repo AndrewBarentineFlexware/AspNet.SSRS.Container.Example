@@ -1,0 +1,12 @@
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts
+    Lucida Console (TrueType)    REG_SZ    lucon.TTF
+    Courier 10,12,15    REG_SZ    COURE.FON
+    Courier 10,12,15 (120)    REG_SZ    COURF.FON
+    MS Serif 8,10,12,14,18,24    REG_SZ    SERIFE.FON
+    MS Serif 8,10,12,14,18,24 (120)    REG_SZ    SERIFF.FON
+    MS Sans Serif 8,10,12,14,18,24    REG_SZ    SSERIFE.FON
+    MS Sans Serif 8,10,12,14,18,24 (120)    REG_SZ    SSERIFF.FON
+    Small Fonts    REG_SZ    SMALLE.FON
+    Small Fonts (120)    REG_SZ    SMALLF.FON
+

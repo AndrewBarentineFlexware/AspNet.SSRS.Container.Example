@@ -1,0 +1,26 @@
+#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+#For more information, please see https://aka.ms/containercompat 
+
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
+
+ARG source
+
+WORKDIR /inetpub/wwwroot
+COPY ${source:-obj/Docker/publish} .
+
+WORKDIR /windows/fonts
+COPY HelmetCondensed.ttf .
+COPY arial.ttf .
+
+#RUN reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "HelmetCondensed Normal (TrueType)" /t REG_SZ /d "c:\windows\fonts\HelmetCondensed.ttf"
+#RUN echo reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "HelmetCondensed Normal (TrueType)" /t REG_SZ /d "c:\windows\fonts\HelmetCondensed.ttf" > add_font.bat
+#CMD ["cmd", "/C", "add_font.bat"]
+
+#RUN powershell -Command "Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows` NT\\CurrentVersion\\Fonts' -Name 'HelmetCondensed' -Value 'HelmetCondensed.ttf'"
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start the IIS service when the container starts
+ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]
+#ENTRYPOINT ["cmd", "/C", "C:\\inetpub\\wwwroot\\startup.bat"]

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+	<Author>Flexware Innovation</Author>
+	<AutoRefresh>0</AutoRefresh>
+	<DataSources>
+		<DataSource Name="LabelDataSet">
+			<ConnectionProperties>
+				<DataProvider>System.Data.DataSet</DataProvider>
+				<ConnectString>/* Local Connection */</ConnectString>
+			</ConnectionProperties>
+			<rd:DataSourceID>b1057600-7d02-4051-ae2a-c01d5475683d</rd:DataSourceID>
+		</DataSource>
+	</DataSources>
+	<ReportSections>
+		<ReportSection>
+			<Body>
+				<ReportItems>
+					<Textbox Name="Textbox8">
+						<CanGrow>true</CanGrow>
+						<KeepTogether>true</KeepTogether>
+						<Paragraphs>
+							<Paragraph>
+								<TextRuns>
+									<TextRun>
+										<Value>ABC</Value>
+									</TextRun>
+								</TextRuns>
+								<Style>
+									<TextAlign>Center</TextAlign>
+								</Style>
+							</Paragraph>
+						</Paragraphs>
+						<rd:DefaultName>Textbox1</rd:DefaultName>
+						<Top>1.38472in</Top>
+						<Left>0.12917in</Left>
+						<Height>0.15625in</Height>
+						<Width>0.68333in</Width>
+						<Style>
+							<Border>
+								<Style>None</Style>
+							</Border>
+						</Style>
+					</Textbox>
+				</ReportItems>
+				<Height>1.91667in</Height>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Body>
+			<Width>1.33333in</Width>
+			<Page>
+				<PageFooter>
+					<Height>0in</Height>
+					<PrintOnFirstPage>true</PrintOnFirstPage>
+					<PrintOnLastPage>true</PrintOnLastPage>
+					<Style>
+						<Border>
+							<Style>None</Style>
+						</Border>
+					</Style>
+				</PageFooter>
+				<PageHeight>2.25in</PageHeight>
+				<PageWidth>4.5in</PageWidth>
+				<Style />
+			</Page>
+		</ReportSection>
+	</ReportSections>
+	<ReportParameters>
+		<ReportParameter Name="VehicleID">
+			<DataType>Integer</DataType>
+			<Prompt>ReportParameter1</Prompt>
+		</ReportParameter>
+	</ReportParameters>
+	<ReportParametersLayout>
+		<GridLayoutDefinition>
+			<NumberOfColumns>2</NumberOfColumns>
+			<NumberOfRows>16</NumberOfRows>
+			<CellDefinitions>
+				<CellDefinition>
+					<ColumnIndex>0</ColumnIndex>
+					<RowIndex>0</RowIndex>
+					<ParameterName>VehicleID</ParameterName>
+				</CellDefinition>
+			</CellDefinitions>
+		</GridLayoutDefinition>
+	</ReportParametersLayout>
+	<EmbeddedImages>
+		<EmbeddedImage Name="Demo_Watermark_Small">
+			<MIMEType>image/jpeg</MIMEType>
+			<ImageData>
+				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
+			</ImageData>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+	<rd:ReportUnitType>Inch</rd:ReportUnitType>
+	<rd:ReportID>3a91c41e-1591-45b1-b8bc-fbf46f3abc93</rd:ReportID>
+</Report>

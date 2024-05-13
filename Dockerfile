@@ -41,4 +41,4 @@ COPY --from=build /app/AspNet.SSRS.Container.Example/startup.ps1 .
 EXPOSE 80
 
 # Start the IIS service and your application when the container starts
-ENTRYPOINT ["powershell", "-File", "C:\\app\\startup.ps1"]
+ENTRYPOINT ["powershell", "-Command", "& 'C:/app/startup.ps1'; Start-Process -FilePath 'C:/ServiceMonitor.exe' -ArgumentList 'w3svc' -NoNewWindow -Wait"]

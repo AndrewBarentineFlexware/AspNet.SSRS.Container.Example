@@ -7,9 +7,9 @@ There is a endpoint in the home controller for creating a simple PDF that render
 
 1. Create an Azure Container registry
 2. Open cmd on your computer and navigate to the root directory of the project
-3. Perform an AZ Login
-4. Perform an acr login --name {Name of the acr from step one goes here}
-5. Build your Image docker build -t {acr name goes here}.azurecr.io/{Name your image}:latest .
-6. Push it to your ACR docker push {acr name goes here}.azurecr.io/{Name your image}:latest
+3. Perform an az login
+4. Perform an az acr login --name {Name of the acr from step one goes here}
+5. Build your Image: docker build -t {acr name goes here}.azurecr.io/{Name your image}:latest .
+6. Push it to your ACR: docker push {acr name goes here}.azurecr.io/{Name your image}:latest
 7. Create an Azure web app that is windows based for containers
 8. Update your web app to pull the latest image you published to your ACR

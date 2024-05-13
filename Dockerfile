@@ -34,9 +34,6 @@ WORKDIR /windows/fonts
 COPY --from=build /app/AspNet.SSRS.Container.Example/HelmetCondensed.ttf .
 COPY --from=build /app/AspNet.SSRS.Container.Example/arial.ttf .
 
-# Run the .bat file - This does not seem to work...
-#RUN /inetpub/wwwroot/add_font.bat
-
 WORKDIR /app
 COPY --from=build /app/AspNet.SSRS.Container.Example/startup.ps1 .
 
@@ -44,5 +41,4 @@ COPY --from=build /app/AspNet.SSRS.Container.Example/startup.ps1 .
 EXPOSE 80
 
 # Start the IIS service and your application when the container starts
-#ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]
 ENTRYPOINT ["powershell", "-File", "C:\\app\\startup.ps1"]
